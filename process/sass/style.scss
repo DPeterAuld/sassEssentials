@@ -1,4 +1,17 @@
- html {
+// variables start with a $
+$offwhite: #EEE8D6;
+$darkblue: #022933;
+$yellow: #FFBA00;
+$blue: #0076A3;
+$green: #548C27;
+$orange: #F39856;
+$red: #D14348;
+$purple: #6D73C2;
+
+$color-main: $darkblue;
+$color-backgrounds: $orange;
+
+html {
   font-size: 62.5%;
 }
 
@@ -7,8 +20,10 @@ body {
   padding: 0;
   font-size: 1.8rem;
   font-family: 'Helvetica', sans-serif;
-  color: #022933;
-  background-color: #EEE8D6;
+  // color: #022933;
+  color: $color-main;
+  // background-color: #EEE8D6;
+  background-color: $color-backgrounds;
 }
 
 .container {
