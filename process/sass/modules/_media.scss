@@ -7,9 +7,20 @@ $color-media-head:  $blue;
   list-style: none;
 
   .item {
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
+    padding-bottom: 10px;
+    padding-left: 10px;
     border-top: 1px dotted $color-item-border;
     padding-top: 10px;
+    // new
+    &:hover {
+      background: yellow;
+    }
+    // any number of items can be added and the last will have a border below
+    &:last-of-type {
+      border-bottom: 1px dotted $color-item-border;
+    }
+    @include clearfix;
   }
 
   .head {
@@ -17,6 +28,11 @@ $color-media-head:  $blue;
     padding: 0;
     color: $color-media-head;
     font-size: 2rem;
+    // new - contexual
+    // id = typography and parent element class = head
+    #typography & {
+      color: $red;
+    }
   }
 
   p {

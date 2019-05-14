@@ -1,3 +1,11 @@
+// list items in index would normally need a clear-fix type class to
+//    prevent the issue of the image shifting when the text is not tall
+//    enough to match the image due to the float property
+// create a mixin to handle this
+
+
+
+
 @mixin backImage($image,
   $height: 100vh,
   $bgPos: center center
@@ -11,3 +19,22 @@
   background-size: cover;
   height: $height;
 }
+
+
+// new
+// whatever element you put me in I'm going to ask the parent to have
+// a before class and after class
+// this is a typical clear fix
+// this gets added (@include clearfix;) to the element
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
