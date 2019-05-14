@@ -8,8 +8,13 @@ $orange: #F39856;
 $red: #D14348;
 $purple: #6D73C2;
 
+// usages of color variables
 $color-main: $darkblue;
 $color-backgrounds: $orange;
+
+// https://www.google.com/fonts
+// import and setup similar to colors
+$font-main: 'Merriweather', Helvetica, sans-serif;
 
 html {
   font-size: 62.5%;
@@ -19,7 +24,8 @@ body {
   margin: 0;
   padding: 0;
   font-size: 1.8rem;
-  font-family: 'Helvetica', sans-serif;
+  // font-family: 'Helvetica', sans-serif;
+  font-family: $font-main;
   // color: #022933;
   color: $color-main;
   // background-color: #EEE8D6;
