@@ -35,8 +35,28 @@
   }
 }
 
-@mixin break($length) {
-  @media (min-width: $length) {
-    @content;
+// modify with arguement list, add ... to the end of the variable
+// @mixin break($first, $args...) --- optional method of setup
+// @mixin break($length) {
+@mixin break($args...) {
+  // new, not required with selecting specific args below
+  @if length($args) == 1 {
+    @media (min-width: nth($args, 1)) {
+      @content;
+    }
   }
+  
+  // @if length($args) == 2 {
+    // can be setup to use else
+    @else {
+    @media (min-width: nth($args, 1))
+      and (max-width: nth($args, 2)) {
+      @content;
+    }
+  }
+
+  // @media (min-width: $length) {
+  // @media (min-width: nth($args, 1)) {
+  //   @content;
+  // }
 }
