@@ -3,6 +3,9 @@ $color-btn-default: $color-main;
 $color-btn-hot: $red;
 $color-btn-cool: $blue;
 
+// new variable
+// using spaces as that is how items are expected in border-radius
+$roundness: 20px 0 20px 0;
 
 %btn {
 	display: inline-block;
@@ -41,7 +44,10 @@ $color-btn-cool: $blue;
 	}
 	img {
 		display: block;
-		border-radius: 10px;
+		// border-radius: 10px;
+		// using new variable
+		// border-radius: $roundness;
+		border-radius: nth($roundness,1);
 		max-width: 100%;
 	}
 }
