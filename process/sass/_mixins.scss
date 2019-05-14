@@ -22,3 +22,20 @@
     clear: both;
   }
 }
+
+// qty = number of columns or number of elements
+// margin = space between columns
+@mixin imageGrid($qty, $margin) {
+  width: (( 100% - (( $qty - 1 ) * $margin )) / $qty );  // 100% referring to the container
+  &:nth-child(n) {
+    margin-right: $margin;
+    margin-bottom: $margin;
+  }
+  &:nth-child(#{$qty}n) {    // # allows to enter a variable; we getting the last element
+    margin-right: 0;
+    margin-right: 0;
+  }
+
+}
+
+

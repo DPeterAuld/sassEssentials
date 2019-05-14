@@ -32,3 +32,20 @@ $color-btn-cool: $blue;
 	@extend %btn;
 	background: $color-btn-cool;
 }
+
+// setting up image grid
+.grid {
+	@include clearfix;
+	.item {
+		float: left;
+		@include imageGrid(5,1%);
+	}
+	img {
+		display: block;
+		border-radius: 10px;
+		max-width: 100%; // will take up the full width of the container which in our case is the class=item inside of the div
+	}
+}
+
+
+
