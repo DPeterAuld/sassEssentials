@@ -34,3 +34,11 @@
     margin-bottom: 0;
   }
 }
+
+// new
+@mixin break($length) {
+  @media (min-width: $length) {
+    @content;
+  }
+}
+
