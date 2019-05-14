@@ -1,4 +1,12 @@
-.btn {
+$color-btn-text: $color-backgrounds;
+$color-btn-default: $color-main;
+$color-btn-hot: $red;
+$color-btn-cool: $blue;
+
+
+// .btn {
+	// % turns it into an invisible class that is not output into the css
+%btn {
 	display: inline-block;
 	padding: 6px 12px;
 	text-align: center;
@@ -9,4 +17,23 @@
 	border-radius: 4px;
 	font-family: $font-highlight;
 	user-select: none;
+	color: $color-btn-text;
+}
+
+.btn-default {
+	// @extend .btn;
+	@extend %btn;
+	background: $color-btn-default;
+}
+
+.btn-hot {
+	// @extend .btn;
+	@extend %btn;
+	background: $color-btn-hot;
+}
+
+.btn-cool {
+	// @extend .btn;
+	@extend %btn;
+	background: $color-btn-cool;
 }
